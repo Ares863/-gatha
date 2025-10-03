@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+header {
+    background: #2b0303;
+    color: white;
+    padding: 40px 20px;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+.header li {
+    padding: 15px 25px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.header li:hover {
+    background-color: #3f1313;
+    ;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+.header li::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: 5px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+.header li:hover::after {
+    width: 100%;
+}
+
+.navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #2b0303;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        z-index: 9999;
+        border-bottom: 2px solid white;
+    }
+
+    .navbar a {
+        color: white;
+        padding: 12px 20px;
+        text-decoration: none;
+        font-weight: bold;
+        position: relative;
+        transition: 0.3s;
+    }
+
+    .navbar a::after {
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        left: 0;
+        bottom: 5px;
+        background-color: white;
+        transition: width 0.3s ease-in-out;
+    }
+
+    .navbar a:hover::after {
+        width: 100%;
+    }
+
+    .navbar a:hover {
+        background-color: #110101;
+        color: white;
+        transform: scale(1.1);
+    }
+
+    .navbar a.active {
+        background-color: white;
+        color: #222;
+        transform: scale(1.1);
+        border-bottom: 3px solid white;
+    }
+
+    section {
+        max-width: 1000px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    section h1,
+    section h2 {
+        color: #ff6b81;
+        margin-bottom: 15px;
+    }
+
+    section p {
+        margin-bottom: 10px;
+    }
+
+    section ul {
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+
+    section li::marker {
+        color: #ff6b81;
+    }
+
+    footer {
+        background-color: #2b0303;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9em;
+    }
+
+    strong {
+        color: #ff6b81;
+    }
+
+    em {
+        color: #ff6b81;
+    }
+
+    /* Responsividade simples */
+    @media(max-width: 600px) {
+        nav ul {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
